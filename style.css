@@ -1,3 +1,269 @@
+:root {
+  --color-accent: oklch(65% 0.18 250);
+  --color-border: oklch(80% 0.03 200);
+  --color-card: oklch(98% 0.01 250);
+  --color-text: oklch(25% 0.02 250);
+  accent-color: var(--color-accent);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--color-text);
+  background-color: white;
+}
+
 body {
   font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin: 0 auto;
+  padding-inline: 1rem;
+  padding-block: 1rem 2rem;
+}
+
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 6vw, 4rem);
+  margin-block: 0.2em 0.4em;
+}
+
+nav {
+  display: flex;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+nav a {
+  flex: 1;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5em;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid var(--color-border);
+  padding-bottom: 0.1em;
+  font-weight: 600;
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.1em;
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+p {
+  margin-block: 0 1rem;
+}
+
+.home-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(15rem, 22rem);
+  gap: 2rem;
+  align-items: start;
+}
+
+.profile-photo {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0.8rem 1.6rem oklch(0% 0 0 / 0.12);
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.contact-form label,
+.contact-form button {
+  grid-column: 1 / -1;
+}
+
+.contact-form label {
+  display: grid;
+  grid-template-columns: subgrid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contact-form label span {
+  font-weight: 600;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.contact-form textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 0.8rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: var(--color-accent);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  filter: brightness(1.05);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1rem;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 0.9rem;
+}
+
+.projects h2,
+.projects p {
+  margin: 0;
+}
+
+.projects h2 {
+  font-size: 1.25rem;
+}
+
+.projects img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  background-color: oklch(92% 0.01 240);
+}
+
+.resume-page section {
+  margin-block: 1.5rem;
+  padding: 1.25rem;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 0.9rem;
+}
+
+.resume-page section h2 {
+  margin-top: 0;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.education-item img {
+  width: 6rem;
+  height: auto;
+}
+
+.education-item h3,
+.resume-project h3 {
+  margin: 0 0 0.35rem;
+}
+
+.resume-project + .resume-project {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills-list li {
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background-color: oklch(from var(--color-accent) 95% 4% h);
+  border: 1px solid oklch(from var(--color-accent) 85% 7% h);
+}
+
+@media (max-width: 50rem) {
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 42rem) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    min-width: 7rem;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form label {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .education-item {
+    grid-template-columns: 1fr;
+  }
 }
