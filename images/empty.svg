@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
-  <title id="title">Placeholder image</title>
-  <desc id="desc">A gray placeholder box that says image coming soon.</desc>
-  <rect width="800" height="450" fill="#e8edf2" rx="24" ry="24"/>
-  <rect x="110" y="85" width="580" height="280" fill="#d7dee6" rx="18" ry="18"/>
-  <text x="400" y="235" text-anchor="middle" font-family="system-ui, sans-serif" font-size="34" fill="#6b7280" letter-spacing="2">
-    IMAGE COMING SOON
-  </text>
-</svg>
