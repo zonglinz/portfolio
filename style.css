@@ -13,8 +13,9 @@
 }
 
 html {
-  color: var(--color-text);
-  background-color: white;
+  color-scheme: light dark;
+  background-color: canvas;
+  color: canvastext;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
   margin: 0 auto;
   padding-inline: 1rem;
   padding-block: 1rem 2rem;
+  position: relative;
 }
 
 main {
@@ -54,9 +56,10 @@ h1 {
 }
 
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   margin-bottom: 2rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -69,7 +72,7 @@ nav a {
 }
 
 nav a.current {
-  border-bottom: 0.4em solid var(--color-border);
+  border-bottom: 0.4em solid var(--border-color);
   padding-bottom: 0.1em;
   font-weight: 600;
 }
@@ -77,11 +80,29 @@ nav a.current {
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 p {
   margin-block: 0 1rem;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+.color-scheme select {
+  margin-left: 0.5rem;
 }
 
 .home-layout {
@@ -120,19 +141,14 @@ p {
   font-weight: 600;
 }
 
-input,
-textarea,
-button {
-  font: inherit;
-}
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 0.65rem 0.8rem;
-  border: 1px solid var(--color-border);
+  border: 1px solid color-mix(in oklch, canvastext, canvas 80%);
   border-radius: 0.5rem;
-  background-color: white;
+  background-color: canvas;
+  color: inherit;
 }
 
 .contact-form textarea {
@@ -166,8 +182,8 @@ button {
   grid-row: span 3;
   gap: 1rem;
   padding: 1rem;
-  background-color: var(--color-card);
-  border: 1px solid var(--color-border);
+  background-color: color-mix(in oklch, canvas 92%, var(--color-accent) 8%);
+  border: 1px solid color-mix(in oklch, canvastext, canvas 80%);
   border-radius: 0.9rem;
 }
 
@@ -185,14 +201,14 @@ button {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 0.5rem;
-  background-color: oklch(92% 0.01 240);
+  background-color: color-mix(in oklch, canvas 85%, var(--color-accent) 15%);
 }
 
 .resume-page section {
   margin-block: 1.5rem;
   padding: 1.25rem;
-  background-color: var(--color-card);
-  border: 1px solid var(--color-border);
+  background-color: color-mix(in oklch, canvas 92%, var(--color-accent) 8%);
+  border: 1px solid color-mix(in oklch, canvastext, canvas 80%);
   border-radius: 0.9rem;
 }
 
@@ -220,7 +236,7 @@ button {
 .resume-project + .resume-project {
   margin-top: 1.25rem;
   padding-top: 1.25rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid color-mix(in oklch, canvastext, canvas 80%);
 }
 
 .skills-list {
@@ -235,8 +251,8 @@ button {
 .skills-list li {
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
-  background-color: oklch(from var(--color-accent) 95% 4% h);
-  border: 1px solid oklch(from var(--color-accent) 85% 7% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+  border: 1px solid color-mix(in oklch, var(--color-accent), canvas 70%);
 }
 
 @media (max-width: 50rem) {

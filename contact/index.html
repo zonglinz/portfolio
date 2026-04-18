@@ -5,39 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
   <link rel="stylesheet" href="../style.css">
+  <script type="module" src="../global.js"></script>
 </head>
 <body>
-  <nav>
-    <a href="../">Home</a>
-    <a href="../projects/">Projects</a>
-    <a href="../contact/">Contact</a>
-    <a href="../resume/">Resume</a>
-    <a href="https://github.com/zonglinz" target="_blank">GitHub</a>
-  </nav>
-
   <h1>Contact</h1>
 
-  <form action="mailto:YOUR_EMAIL@example.com" method="POST" enctype="text/plain">
+  <form class="contact-form" action="mailto:zoz002@ucsd.edu" method="GET">
     <label>
-      Email:
-      <input type="email" name="email" value="example@email.com">
-    </label>
-
-    <br><br>
-
-    <label>
-      Subject:
+      <span>Subject:</span>
       <input name="subject" value="Hello from your website">
     </label>
 
-    <br><br>
-
     <label>
-      Message:
+      <span>Message:</span>
       <textarea name="body" rows="6" cols="40">Hi Zonglin, I found your website and wanted to reach out.</textarea>
     </label>
-
-    <br><br>
 
     <button>Send</button>
   </form>

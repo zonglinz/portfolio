@@ -5,56 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume</title>
   <link rel="stylesheet" href="../style.css">
+  <script type="module" src="../global.js"></script>
 </head>
-<body>
-  <nav>
-    <a href="../">Home</a>
-    <a href="../projects/">Projects</a>
-    <a href="../contact/">Contact</a>
-    <a href="../resume/">Resume</a>
-    <a href="https://github.com/zonglinz" target="_blank">GitHub</a>
-  </nav>
-
+<body class="resume-page">
   <h1>Resume</h1>
 
   <section>
     <h2>Education</h2>
-    <article>
+    <article class="education-item">
       <img src="../images/ucsd.png" alt="UC San Diego logo" width="120">
-      <h3>University of California San Diego</h3>
-      <p>B.S. in Data Science</p>
-      <p><time datetime="2024">2024</time> – <time datetime="2027">2027</time></p>
+      <div>
+        <h3>University of California San Diego</h3>
+        <p>B.S. in Data Science</p>
+        <p><time datetime="2024">2024</time> – <time datetime="2027">2027</time></p>
+      </div>
     </article>
   </section>
 
   <section>
     <h2>Skills</h2>
-    <ul>
+    <ul class="skills-list">
       <li>Python</li>
       <li>SQL</li>
       <li>HTML</li>
       <li>CSS</li>
+      <li>JavaScript</li>
       <li>Data analysis</li>
     </ul>
   </section>
 
   <section>
     <h2>Projects</h2>
-    <article>
+    <article class="resume-project">
       <h3>Air Toxics and Adult Cancer Prevalence</h3>
       <p>
         Analyzed county-level public health and environmental data using regression and visualization.
-        <a href="https://drive.google.com/file/d/1xJwpT_U8nmG19Y5fGchLopbZgyFhQUfK/view?usp=sharing" target="_blank">
+        <a href="https://drive.google.com/file/d/1xJwpT_U8nmG19Y5fGchLopbZgyFhQUfK/view?usp=sharing" target="_blank" rel="noreferrer noopener">
           View Air Toxics Project
         </a>
       </p>
     </article>
 
-    <article>
+    <article class="resume-project">
       <h3>EEG Blink Classification</h3>
       <p>
         Built a model to distinguish single and double blinks using EEG signals.
-        <a href="https://drive.google.com/file/d/11aJpJ8cx_7OBgUrcsy35wlPcHgw2hwgv/view?usp=sharing" target="_blank">
+        <a href="https://drive.google.com/file/d/11aJpJ8cx_7OBgUrcsy35wlPcHgw2hwgv/view?usp=sharing" target="_blank" rel="noreferrer noopener">
           View Blink Experiment
         </a>
       </p>
