@@ -57,6 +57,7 @@ nav {
   display: flex;
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--border-color);
+  padding-right: 12rem; /* reserve room for the theme switcher */
 }
 
 nav a {
@@ -86,9 +87,13 @@ p {
 
 .color-scheme {
   position: absolute;
-  top: 1rem;
+  top: 0.75rem;
   right: 1rem;
   font-size: 80%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
 }
 
 input,
@@ -99,7 +104,7 @@ select {
 }
 
 .color-scheme select {
-  margin-left: 0.5rem;
+  min-width: 8rem;
 }
 
 .home-layout {
@@ -259,8 +264,15 @@ select {
 }
 
 @media (max-width: 42rem) {
+  .color-scheme {
+    position: static;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+
   nav {
     flex-wrap: wrap;
+    padding-right: 0;
   }
 
   nav a {
