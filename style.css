@@ -19,13 +19,8 @@ body {
   font: 100%/1.5 system-ui;
   max-width: 100ch;
   margin: 0 auto;
-  padding-inline: 1rem;
-  padding-block: 1rem 2rem;
+  padding: 1rem;
   position: relative;
-}
-
-main {
-  display: block;
 }
 
 img {
@@ -34,7 +29,7 @@ img {
 }
 
 a {
-  color: var(--color-accent);
+  color: inherit;
 }
 
 h1,
@@ -47,26 +42,20 @@ h6 {
   text-wrap: balance;
 }
 
-h1 {
-  font-size: clamp(2.75rem, 6vw, 4rem);
-  margin-block: 0.2em 0.4em;
-}
-
 nav {
   --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--border-color);
-  padding-right: 12rem; /* reserve room for the theme switcher */
+  padding-right: 12rem;
 }
 
 nav a {
   flex: 1;
-  color: inherit;
   text-decoration: none;
   text-align: center;
   padding: 0.5em;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  color: inherit;
 }
 
 nav a.current {
@@ -81,13 +70,10 @@ nav a:hover {
   background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
-p {
-  margin-block: 0 1rem;
-}
 
 .color-scheme {
   position: absolute;
-  top: 0.75rem;
+  top: 1rem;
   right: 1rem;
   font-size: 80%;
   display: flex;
@@ -103,173 +89,30 @@ select {
   font: inherit;
 }
 
-.color-scheme select {
-  min-width: 8rem;
-}
 
-.home-layout {
+form {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(15rem, 22rem);
-  gap: 2rem;
-  align-items: start;
-}
-
-.profile-photo {
-  width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 0.8rem 1.6rem oklch(0% 0 0 / 0.12);
-}
-
-.contact-form {
-  display: grid;
-  grid-template-columns: auto 1fr;
   gap: 1rem;
-  align-items: start;
 }
 
-.contact-form label,
-.contact-form button {
-  grid-column: 1 / -1;
-}
-
-.contact-form label {
+label {
   display: grid;
-  grid-template-columns: subgrid;
-  gap: 1rem;
-  align-items: center;
+  gap: 0.35rem;
 }
 
-.contact-form label span {
-  font-weight: 600;
+input,
+textarea,
+select,
+button {
+  padding: 0.5rem 0.75rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.65rem 0.8rem;
-  border: 1px solid color-mix(in oklch, canvastext, canvas 80%);
-  border-radius: 0.5rem;
-  background-color: canvas;
-  color: inherit;
-}
-
-.contact-form textarea {
-  min-height: 8rem;
-  resize: vertical;
-}
-
-.contact-form button {
-  padding: 0.8rem 1rem;
-  border: 0;
-  border-radius: 0.5rem;
-  background-color: var(--color-accent);
-  color: white;
-  font-weight: 700;
+button {
   cursor: pointer;
 }
 
-.contact-form button:hover {
-  filter: brightness(1.05);
-}
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap: 1rem;
-}
-
-.projects article {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  gap: 1rem;
-  padding: 1rem;
-  background-color: color-mix(in oklch, canvas 92%, var(--color-accent) 8%);
-  border: 1px solid color-mix(in oklch, canvastext, canvas 80%);
-  border-radius: 0.9rem;
-}
-
-.projects h2,
-.projects p {
-  margin: 0;
-}
-
-.projects h2 {
-  font-size: 1.25rem;
-}
-
-.projects img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  background-color: color-mix(in oklch, canvas 85%, var(--color-accent) 15%);
-}
-
-.resume-page section {
-  margin-block: 1.5rem;
-  padding: 1.25rem;
-  background-color: color-mix(in oklch, canvas 92%, var(--color-accent) 8%);
-  border: 1px solid color-mix(in oklch, canvastext, canvas 80%);
-  border-radius: 0.9rem;
-}
-
-.resume-page section h2 {
-  margin-top: 0;
-}
-
-.education-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
-  align-items: center;
-}
-
-.education-item img {
-  width: 6rem;
-  height: auto;
-}
-
-.education-item h3,
-.resume-project h3 {
-  margin: 0 0 0.35rem;
-}
-
-.resume-project + .resume-project {
-  margin-top: 1.25rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid color-mix(in oklch, canvastext, canvas 80%);
-}
-
-.skills-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.skills-list li {
-  padding: 0.45rem 0.8rem;
-  border-radius: 999px;
-  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
-  border: 1px solid color-mix(in oklch, var(--color-accent), canvas 70%);
-}
-
-@media (max-width: 50rem) {
-  .home-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 42rem) {
-  .color-scheme {
-    position: static;
-    justify-content: flex-end;
-    margin-bottom: 1rem;
-  }
-
+@media (max-width: 48rem) {
   nav {
     flex-wrap: wrap;
     padding-right: 0;
@@ -279,16 +122,9 @@ select {
     min-width: 7rem;
   }
 
-  .contact-form {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form label {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .education-item {
-    grid-template-columns: 1fr;
+  .color-scheme {
+    position: static;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
   }
 }
