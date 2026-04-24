@@ -6,24 +6,41 @@
   <title>Zonglin Zhang: Personal site and portfolio</title>
   <link rel="stylesheet" href="style.css">
   <script type="module" src="global.js"></script>
+  <script type="module" src="index.js"></script>
 </head>
 <body>
-  <main class="home-layout">
-    <div>
-      <h1>Zonglin Zhang</h1>
-      <p>Hello! I am a UC San Diego student interested in data science, technology, and web development.</p>
-      <p>
-        I enjoy building clear, useful digital experiences and learning how data, design,
-        and code can work together.
-      </p>
-    </div>
+  <main>
+    <section class="home-layout">
+      <div>
+        <h1>Zonglin Zhang</h1>
+        <p>Hello! I am a UC San Diego student interested in data science, technology, and web development.</p>
+        <p>
+          I enjoy building clear, useful digital experiences and learning how data, design,
+          and code can work together.
+        </p>
+      </div>
 
-    <img
-      class="profile-photo"
-      src="images/IMG_0542.jpeg"
-      alt="Photo of Zonglin Zhang and his son with a locally caught yellowtail"
-      width="300"
-    >
+      <img
+        class="profile-photo"
+        src="images/IMG_0542.jpeg"
+        alt="Photo of Zonglin Zhang and his son with a locally caught yellowtail"
+        width="300"
+      >
+    </section>
+
+    <section class="github-section">
+      <h2>GitHub Stats</h2>
+      <div id="profile-stats">
+        <p>Loading GitHub data...</p>
+      </div>
+    </section>
+
+    <section class="latest-projects-section">
+      <h2>Latest Projects</h2>
+      <div class="projects">
+        <!-- Latest projects are added from ./lib/projects.json by index.js -->
+      </div>
+    </section>
   </main>
 </body>
 </html>
