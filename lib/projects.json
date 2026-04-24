@@ -1,62 +1,74 @@
 [
-    {
-        "title": "Data Story Prototype",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A draft concept for turning raw datasets into a narrative visualization with a clear takeaway."
-    },
-    {
-        "title": "Interactive Dashboard",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A responsive dashboard mockup designed to compare trends across multiple categories and time periods."
-    },
-    {
-        "title": "Machine Learning Notes",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A space for experiments, model summaries, and lessons learned while practicing applied machine learning."
-    },
-    {
-        "title": "Web Design Exercise",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A small front-end build focused on layout, typography, spacing, and stronger visual hierarchy."
-    },
-    {
-        "title": "Campus Data Explorer",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A concept for browsing university-related data through filters, summaries, and simple visual explanations."
-    },
-    {
-        "title": "Portfolio Case Study",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A project write-up template that highlights motivation, process, tools, and measurable results."
-    },
-    {
-        "title": "Research Reading Log",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A lightweight page for collecting useful papers, short notes, and follow-up questions for future work."
-    },
-    {
-        "title": "Python Automation Tool",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A placeholder for scripts that clean data, automate repetitive tasks, and speed up analysis workflows."
-    },
-    {
-        "title": "Visualization Sketchbook",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A collection of chart ideas and rough concepts for experimenting with form, comparison, and emphasis."
-    },
-    {
-        "title": "Open Data Mini App",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A simple app idea that combines public data with clean controls and readable presentation."
-    },
-    {
-        "title": "Course Lab Archive",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A future home for class assignments, with each entry showing screenshots, code, and takeaways."
-    },
-    {
-        "title": "Personal Analytics Project",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A placeholder for an end-to-end analysis project that combines data wrangling, modeling, and communication."
-    }
+  {
+    "title": "Lab 4: JavaScript II Portfolio Update",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Converted the portfolio project list from hardcoded HTML into reusable JavaScript templates powered by a JSON data file and GitHub API data."
+  },
+  {
+    "title": "Lab 3: Introduction to JavaScript",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Added modular JavaScript to the site, including dynamic navigation, current-page highlighting, a theme picker, and contact form behavior."
+  },
+  {
+    "title": "Lab 2: Styling with CSS",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Designed the portfolio layout with responsive grids, custom spacing, image styling, project cards, and light/dark color-scheme support."
+  },
+  {
+    "title": "Lab 1: Personal Website Structure",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Built the first version of the personal portfolio with separate pages for the homepage, projects, contact information, and resume."
+  },
+  {
+    "title": "Air Toxics and Adult Cancer Prevalence",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Analyzed public health and environmental data to explore possible relationships between air toxics exposure and adult cancer prevalence."
+  },
+  {
+    "title": "EEG Blink Classification",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Built and evaluated a model for distinguishing single and double blinks from EEG signal data."
+  },
+  {
+    "title": "Data Story Prototype",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Drafted a concept for turning raw datasets into a narrative visualization with a clear takeaway."
+  },
+  {
+    "title": "Interactive Dashboard",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Created a responsive dashboard mockup for comparing trends across multiple categories and time periods."
+  },
+  {
+    "title": "Machine Learning Notes",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Collected experiments, model summaries, and lessons learned while practicing applied machine learning."
+  },
+  {
+    "title": "Campus Data Explorer",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Outlined a tool for browsing university-related data through filters, summaries, and simple visual explanations."
+  },
+  {
+    "title": "Python Automation Tool",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Planned scripts for cleaning data, automating repetitive tasks, and speeding up analysis workflows."
+  },
+  {
+    "title": "Visualization Sketchbook",
+    "year": "2022",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Collected chart ideas and rough visualization concepts for experimenting with comparison, emphasis, and storytelling."
+  }
 ]
