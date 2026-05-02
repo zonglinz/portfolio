@@ -126,7 +126,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
   containerElement.innerHTML = '';
 
   if (!Array.isArray(projects) || projects.length === 0) {
-    containerElement.innerHTML = '<p>No projects to display yet.</p>';
+    containerElement.innerHTML = '<p class="no-projects">No projects match the current filters.</p>';
     return;
   }
 
@@ -138,15 +138,31 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     const title = project.title || 'Untitled Project';
     const image = project.image || 'https://vis-society.github.io/labs/2/images/empty.svg';
     const description = project.description || 'No description available.';
-    const year = project.year ? `<p class="project-year">${project.year}</p>` : '';
+    const year = project.year || '';
 
-    article.innerHTML = `
-      <${heading}>${title}</${heading}>
-      <img src="${image}" alt="${title}">
-      ${year}
-      <p>${description}</p>
-    `;
+    const headingElement = document.createElement(heading);
+    headingElement.textContent = title;
 
+    const imageElement = document.createElement('img');
+    imageElement.src = image;
+    imageElement.alt = title;
+
+    const projectText = document.createElement('div');
+    projectText.className = 'project-text';
+
+    const descriptionElement = document.createElement('p');
+    descriptionElement.className = 'project-description';
+    descriptionElement.textContent = description;
+    projectText.append(descriptionElement);
+
+    if (year) {
+      const yearElement = document.createElement('p');
+      yearElement.className = 'project-year';
+      yearElement.textContent = year;
+      projectText.append(yearElement);
+    }
+
+    article.append(headingElement, imageElement, projectText);
     containerElement.appendChild(article);
   }
 }

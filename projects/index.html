@@ -12,7 +12,26 @@
   <main>
     <h1 class="projects-title">Projects</h1>
 
-    <div class="projects">
+    <div class="chart-container" aria-label="Projects by year visualization">
+      <svg
+        id="projects-pie-plot"
+        viewBox="-50 -50 100 100"
+        role="group"
+        aria-label="Pie chart controls for filtering projects by year"
+      ></svg>
+      <ul class="legend" aria-label="Project years legend"></ul>
+    </div>
+
+    <input
+      class="searchBar"
+      type="search"
+      aria-label="Search projects"
+      placeholder="🔍 Search projects…"
+    >
+
+    <p class="filter-summary" aria-live="polite"></p>
+
+    <div class="projects" aria-live="polite">
       <!-- Projects are added from ../lib/projects.json by projects.js -->
     </div>
   </main>

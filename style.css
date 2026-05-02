@@ -344,3 +344,146 @@ select {
     grid-row: auto;
   }
 }
+
+/* Lab 5: D3 pie chart, legend, search, and combined filtering */
+.chart-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-block: 1.5rem;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+  flex: 0 0 min(20em, 45vw);
+}
+
+#projects-pie-plot path {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+#projects-pie-plot path:focus-visible,
+.legend-item:focus-visible {
+  outline: 0.18rem solid var(--color-accent);
+  outline-offset: 0.2rem;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover),
+#projects-pie-plot:has(path:focus-visible) path:not(:focus-visible) {
+  opacity: 0.5;
+}
+
+.legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  border: 1px solid color-mix(in oklch, canvastext, canvas 80%);
+  border-radius: 0.9rem;
+  background-color: color-mix(in oklch, canvas 94%, var(--color-accent) 6%);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 9em;
+  padding: 0.35rem 0.45rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 200ms ease, outline-color 200ms ease;
+}
+
+.legend-item:hover {
+  background-color: color-mix(in oklch, var(--color-accent), canvas 88%);
+}
+
+.legend-empty {
+  cursor: default;
+  color: color-mix(in oklch, canvastext, canvas 35%);
+}
+
+.swatch {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 0.25rem;
+  border: 1px solid color-mix(in oklch, canvastext, canvas 75%);
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+#projects-pie-plot path.selected {
+  fill: var(--color);
+}
+
+.legend-item.selected {
+  font-weight: 700;
+  background-color: color-mix(in oklch, var(--color), canvas 82%);
+  outline: 0.12rem solid var(--color);
+}
+
+.searchBar {
+  display: block;
+  width: 100%;
+  margin-block: 1rem 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid color-mix(in oklch, canvastext, canvas 75%);
+  border-radius: 999px;
+  background-color: canvas;
+  color: inherit;
+}
+
+.filter-summary {
+  margin-block: 0 1.25rem;
+  color: color-mix(in oklch, canvastext, canvas 30%);
+}
+
+.project-text {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.project-description {
+  margin: 0;
+}
+
+.project-year {
+  margin: 0;
+  color: color-mix(in oklch, canvastext, canvas 45%);
+  font-family: Baskerville, Georgia, serif;
+  font-variant-numeric: oldstyle-nums;
+  font-weight: 400;
+}
+
+.no-projects {
+  grid-column: 1 / -1;
+  padding: 1rem;
+  border: 1px dashed color-mix(in oklch, canvastext, canvas 70%);
+  border-radius: 0.9rem;
+  color: color-mix(in oklch, canvastext, canvas 30%);
+}
+
+@media (max-width: 48rem) {
+  .chart-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  #projects-pie-plot {
+    align-self: center;
+    flex-basis: auto;
+    width: min(20em, 80vw);
+  }
+}
