@@ -34,13 +34,15 @@
     "title": "Air Toxics and Adult Cancer Prevalence",
     "year": "2024",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Analyzed public health and environmental data to explore possible relationships between air toxics exposure and adult cancer prevalence."
+    "description": "Analyzed public health and environmental data to explore possible relationships between air toxics exposure and adult cancer prevalence.",
+    "url": "https://drive.google.com/file/d/1xJwpT_U8nmG19Y5fGchLopbZgyFhQUfK/view"
   },
   {
     "title": "EEG Blink Classification",
     "year": "2024",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Built and evaluated a model for distinguishing single and double blinks from EEG signal data."
+    "description": "Built and evaluated a model for distinguishing single and double blinks from EEG signal data.",
+    "url": "https://drive.google.com/file/d/11aJpJ8cx_7OBgUrcsy35wlPcHgw2hwgv/view"
   },
   {
     "title": "Data Story Prototype",
