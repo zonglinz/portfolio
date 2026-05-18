@@ -140,13 +140,34 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     const image = project.image || 'https://vis-society.github.io/labs/2/images/empty.svg';
     const description = project.description || 'No description available.';
     const year = project.year || '';
+    const url = typeof project.url === 'string' ? project.url.trim() : '';
 
     const headingElement = document.createElement(heading);
-    headingElement.textContent = title;
+
+    if (url) {
+      const titleLink = document.createElement('a');
+      titleLink.href = url;
+      titleLink.textContent = title;
+      titleLink.target = '_blank';
+      titleLink.rel = 'noreferrer noopener';
+      headingElement.append(titleLink);
+    } else {
+      headingElement.textContent = title;
+    }
 
     const imageElement = document.createElement('img');
     imageElement.src = image;
     imageElement.alt = title;
+
+    const imageWrapper = url ? document.createElement('a') : null;
+
+    if (imageWrapper) {
+      imageWrapper.href = url;
+      imageWrapper.target = '_blank';
+      imageWrapper.rel = 'noreferrer noopener';
+      imageWrapper.className = 'project-image-link';
+      imageWrapper.append(imageElement);
+    }
 
     const projectText = document.createElement('div');
     projectText.className = 'project-text';
@@ -163,7 +184,17 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
       projectText.append(yearElement);
     }
 
-    article.append(headingElement, imageElement, projectText);
+    if (url) {
+      const linkElement = document.createElement('a');
+      linkElement.className = 'project-link';
+      linkElement.href = url;
+      linkElement.target = '_blank';
+      linkElement.rel = 'noreferrer noopener';
+      linkElement.textContent = 'View project';
+      projectText.append(linkElement);
+    }
+
+    article.append(headingElement, imageWrapper || imageElement, projectText);
     containerElement.appendChild(article);
   }
 }
